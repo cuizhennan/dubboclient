@@ -17,6 +17,11 @@
 	</properties>
 
 	<dependencies>
+		<!-- springboot-web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<!-- dubbo-demo-server -->
 		<dependency>
 			<groupId>demo.cui</groupId>
@@ -46,11 +51,6 @@
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.6</version>
-		</dependency>
-		<!-- springboot-web -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>

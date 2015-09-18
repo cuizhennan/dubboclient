@@ -2,28 +2,32 @@ package demo.action;
 
 import java.util.Calendar;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import demo.service.IDemoService;
 
 /**
  * @author zhennan-cui @date 2015年9月16日
  */
+@Controller
+@RequestMapping("/say")
 public class ChatAction {
 
-    private ClassPathXmlApplicationContext context;
+    Logger logger = LoggerFactory.getLogger(ChatAction.class);
 
-    //    @Resource
-    //    IDemoService demoService;
+    @Autowired
+    IDemoService demoService;
 
-    public void sayHello() {
-        context = new ClassPathXmlApplicationContext(new String[] { "applicationConsumer.xml" });
-        context.start();
-
-        IDemoService demoService = (IDemoService) context.getBean("demoService");
-
-        System.out.println("client:"
-                + demoService.sayHello("Morning" + "1:==> " + Calendar.getInstance().getTime())
-                + " ==>3:" + Calendar.getInstance().getTime());
+    @RequestMapping(value = "/sayHello", method = RequestMethod.GET)
+    @ResponseBody
+    public String sayHello() {
+        logger.info("sayHell start");
+        return demoService.sayHello("Morning" + "1:==> " + Calendar.getInstance().getTime());
     }
 }
