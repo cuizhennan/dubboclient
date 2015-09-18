@@ -10,9 +10,10 @@
 
 	<!-- 使用本地伪集群注册中心暴露发现服务地址 -->
 	<dubbo:registry protocol="zookeeper"
-		address="172.16.30.90:2181,172.16.30.90:2182,172.16.30.90:2183" />
+		address="192.168.128.1:2181,192.168.128.1:2182,192.168.128.1:2183" />
 
 	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-	<dubbo:reference interface="demo.service.IDemoService" />
-	
+	<dubbo:reference interface="demo.service.IDemoService"
+		id="demoService" />
+
 </p:beans>
