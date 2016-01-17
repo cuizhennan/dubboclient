@@ -3,7 +3,7 @@ Implementation-Vendor: Pivotal Software, Inc.
 Implementation-Title: dubboclient
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: demo.cui
-Build-Jdk: 1.7.0_45
-Built-By: ￥ﾼﾠ
+Build-Jdk: 1.7.0_79
+Built-By: mx
 Created-By: Maven Integration for Eclipse
 

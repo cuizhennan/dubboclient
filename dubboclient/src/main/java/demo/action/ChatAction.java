@@ -19,15 +19,15 @@ import demo.service.IDemoService;
 @RequestMapping("/say")
 public class ChatAction {
 
-    Logger logger = LoggerFactory.getLogger(ChatAction.class);
+	Logger logger = LoggerFactory.getLogger(ChatAction.class);
 
-    @Autowired
-    IDemoService demoService;
+	@Autowired
+	IDemoService demoService;
 
-    @RequestMapping(value = "/sayHello", method = RequestMethod.GET)
-    @ResponseBody
-    public String sayHello() {
-        logger.info("sayHell start");
-        return demoService.sayHello("Morning" + "1:==> " + Calendar.getInstance().getTime());
-    }
+	@RequestMapping(value = "/sayHello", method = RequestMethod.GET)
+	@ResponseBody
+	public String sayHello() {
+		logger.info("sayHell start ", System.currentTimeMillis());
+		return demoService.sayHello("Morning" + "1:==> " + Calendar.getInstance().getTime());
+	}
 }

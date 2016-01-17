@@ -17,17 +17,6 @@
 	</properties>
 
 	<dependencies>
-		<!-- springboot-web -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<!-- dubbo-demo-server -->
-		<dependency>
-			<groupId>demo.cui</groupId>
-			<artifactId>demodubboserver</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<!-- dubbo -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -51,6 +40,12 @@
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.6</version>
+		</dependency>
+
+		<!-- springboot-web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
